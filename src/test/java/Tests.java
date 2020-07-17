@@ -9,8 +9,8 @@ public class Tests {
 
     @Test
     void shouldReturnValueHigherByTenPercent(){
-        BigDecimal amount = new BigDecimal(100);
-        BigDecimal expected = new BigDecimal(110);
+        BigDecimal amount = new BigDecimal("100");
+        BigDecimal expected = new BigDecimal("110");
         assertEquals(expected, increaseByTenPercent(amount));
     }
 

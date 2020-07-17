@@ -56,18 +56,32 @@ public class Service {
 
     public static void insertARecord(FinanceProductModelDTO financeProductModel) {
         Thread insertingThread = new Thread(() -> {
-        String sql = "insert into finances (name, price, validityperiod) values(?, ?, ?)";
-        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
-            preparedStatement.setString(1, financeProductModel.getName());
-            preparedStatement.setBigDecimal(2, financeProductModel.getPrice());
-            preparedStatement.setInt(3, financeProductModel.getValidityperiod());
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            logger.error("Cannot insert a record to the database.");
-            e.printStackTrace();
-        }
+            String sql = "insert into finances (name, price, validityperiod) values(?, ?, ?)";
+            try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+                preparedStatement.setString(1, financeProductModel.getName());
+                preparedStatement.setBigDecimal(2, financeProductModel.getPrice());
+                preparedStatement.setInt(3, financeProductModel.getValidityperiod());
+                preparedStatement.executeUpdate();
+            } catch (SQLException e) {
+                logger.error("Cannot insert a record to the database.");
+                e.printStackTrace();
+            }
         });
         insertingThread.start();
+    }
+
+    public static void deleteARecord(int id) {
+        Thread deletingThread = new Thread(() -> {
+            String sql = "delete from finances where id = ?";
+            try (final PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+                preparedStatement.setInt(1, id);
+                preparedStatement.executeUpdate();
+            } catch (SQLException e) {
+                logger.error("Cannot delete the record.");
+                e.printStackTrace();
+            }
+        });
+        deletingThread.start();
     }
 
     public static List<FinanceProductModelDTO> selectAllRecords() {
@@ -84,14 +98,14 @@ public class Service {
         }
         try {
             while (resultSet.next()) {
-                FinanceProductModelDTO model = (FinanceProductModelDTO) applicationContext.getBean("model");
-                recordsList.add(model
-                        .builder()
-                        .id(resultSet.getInt("id"))
-                        .name(resultSet.getString("name"))
-                        .price(resultSet.getBigDecimal("price"))
-                        .validityperiod(resultSet.getInt("validityperiod"))
-                        .build());
+                recordsList.add(
+                        FinanceProductModelDTO
+                                .builder()
+                                .id(resultSet.getInt("id"))
+                                .name(resultSet.getString("name"))
+                                .price(resultSet.getBigDecimal("price"))
+                                .validityperiod(resultSet.getInt("validityperiod"))
+                                .build());
             }
         } catch (SQLException e) {
             logger.error("Cannot create a list of records from the database.");

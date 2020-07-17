@@ -2,10 +2,7 @@ package bm.app.controller;
 
 import bm.app.models.FinanceProductModelDTO;
 import bm.app.services.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,8 +21,13 @@ public class RestController {
     }
 
     @PostMapping("/product")
-    public void insertARecordIntoADatabase(@RequestBody FinanceProductModelDTO financeProductModel){
+    public void insertARecordIntoTheDatabase(@RequestBody FinanceProductModelDTO financeProductModel){
         service.insertARecord(financeProductModel);
+    }
+
+    @DeleteMapping("/deleteProduct/{id}")
+    public void deleteARecordFromTheDatabase(@PathVariable int id){
+        service.deleteARecord(id);
     }
 
 
