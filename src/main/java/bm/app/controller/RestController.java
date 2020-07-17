@@ -20,6 +20,11 @@ public class RestController {
         return service.selectAllRecords();
     }
 
+    @GetMapping("/product/{id}")
+    public FinanceProductModelDTO getARecordById(@PathVariable int id){
+        return service.getARecordById(id);
+    }
+
     @PostMapping("/product")
     public void insertARecordIntoTheDatabase(@RequestBody FinanceProductModelDTO financeProductModel){
         service.insertARecord(financeProductModel);

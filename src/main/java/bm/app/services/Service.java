@@ -20,7 +20,6 @@ import static bm.app.config.Constants.*;
 import static bm.app.models.RiskLevel.*;
 
 
-
 @org.springframework.stereotype.Service
 public class Service {
 
@@ -48,26 +47,26 @@ public class Service {
 
     public static RiskLevel giveTheRiskNameBasedOnNumberOfMonths(int months) {
         int riskLevel = calculateRiskLevelByNumberOfMonths(months);
-            switch (riskLevel){
-                case 1:
-                    return NO_RISK;
-                case 2:
-                    return VERY_LOW;
-                case 3:
-                    return LOW;
-                case 4:
-                    return REGULAR;
-                case 5:
-                    return MEDIUM;
-                case 6:
-                    return HIGH;
-                case 7:
-                    return VERY_HIGH;
+        switch (riskLevel) {
+            case 1:
+                return NO_RISK;
+            case 2:
+                return VERY_LOW;
+            case 3:
+                return LOW;
+            case 4:
+                return REGULAR;
+            case 5:
+                return MEDIUM;
+            case 6:
+                return HIGH;
+            case 7:
+                return VERY_HIGH;
         }
         return UNSPECIFIED;
     }
 
-    public static int calculateRiskLevelByNumberOfMonths(int months){
+    public static int calculateRiskLevelByNumberOfMonths(int months) {
         int riskPointer = 0;
         if (months == 1) {
             riskPointer = 1;
@@ -125,6 +124,32 @@ public class Service {
             }
         });
         deletingThread.start();
+    }
+
+    public static FinanceProductModelDTO getARecordById(int id) {
+
+        FinanceProductModelDTO model = new FinanceProductModelDTO();
+        String sql = "select name, price, validityperiod from finances where id = ?";
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+
+        try {
+            preparedStatement = getConnection().prepareStatement(sql);
+            preparedStatement.setInt(1, id);
+            resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+
+            model.setId(id);
+            model.setName(resultSet.getString("name"));
+            model.setPrice(resultSet.getBigDecimal("price"));
+            model.setValidityperiod(resultSet.getInt("validityperiod"));
+
+        } catch (SQLException e) {
+            logger.error("Could not find the record.");
+            e.printStackTrace();
+        }
+
+        return model;
     }
 
     public static List<FinanceProductModelDTO> selectAllRecords() {
