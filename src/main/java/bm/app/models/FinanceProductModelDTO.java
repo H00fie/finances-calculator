@@ -13,15 +13,11 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Component
-public class FinanceProductModel {
+public class FinanceProductModelDTO {
 
-    @JsonProperty
     private int id;
-    @JsonProperty
     private String name;
-    @JsonProperty
     private BigDecimal price;
-    @JsonProperty
     private int validityperiod;
 
 

@@ -1,7 +1,7 @@
 package bm.app.services;
 
 import bm.app.config.Constants;
-import bm.app.models.FinanceProductModel;
+import bm.app.models.FinanceProductModelDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
@@ -15,7 +15,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static bm.app.config.Constants.*;;
+import static bm.app.config.Constants.*;
+
+;
 
 @org.springframework.stereotype.Service
 public class Service {
@@ -52,7 +54,7 @@ public class Service {
         return result;
     }
 
-    public static void insertARecord(FinanceProductModel financeProductModel) {
+    public static void insertARecord(FinanceProductModelDTO financeProductModel) {
         Thread insertingThread = new Thread(() -> {
         String sql = "insert into finances (name, price, validityperiod) values(?, ?, ?)";
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
@@ -68,8 +70,8 @@ public class Service {
         insertingThread.start();
     }
 
-    public static List<FinanceProductModel> selectAllRecords() {
-        List<FinanceProductModel> recordsList = new ArrayList<>();
+    public static List<FinanceProductModelDTO> selectAllRecords() {
+        List<FinanceProductModelDTO> recordsList = new ArrayList<>();
         String sql = "select * from finances";
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
@@ -82,7 +84,7 @@ public class Service {
         }
         try {
             while (resultSet.next()) {
-                FinanceProductModel model = (FinanceProductModel) applicationContext.getBean("model");
+                FinanceProductModelDTO model = (FinanceProductModelDTO) applicationContext.getBean("model");
                 recordsList.add(model
                         .builder()
                         .id(resultSet.getInt("id"))
