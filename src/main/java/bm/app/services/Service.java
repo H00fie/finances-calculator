@@ -15,15 +15,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static bm.app.config.Constants.*;
-import static bm.app.config.Constants.DEFAULT_PASSWORD;
+import static bm.app.config.Constants.*;;
 
+@org.springframework.stereotype.Service
 public class Service {
 
     private static final Logger logger = LoggerFactory.getLogger(Service.class);
-    ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
+    private static ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
 
-    private Connection getConnection(){
+    private static Connection getConnection(){
         Connection connection = Constants.getConnection(
                 DEFAULT_DRIVER,
                 DEFAULT_URL,
@@ -42,11 +42,17 @@ public class Service {
         return result;
     }
 
-//    public static BigDecimal findAProductPriceByGivenName(String name){
-//
-//    }
+    public static BigDecimal findAProductPriceByGivenName(String name){
+        BigDecimal result = selectAllRecords()
+                .stream()
+                .filter(e -> e.equals(name))
+                .findFirst()
+                .get()
+                .getPrice();
+        return result;
+    }
 
-    public List<FinanceProductModel> selectAllRecords(){
+    public static List<FinanceProductModel> selectAllRecords(){
         List<FinanceProductModel> recordsList = new ArrayList<>();
         String sql = "select * from finances";
         PreparedStatement preparedStatement = null;
