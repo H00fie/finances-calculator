@@ -14,6 +14,9 @@ public class Tests {
         assertEquals(expected, increaseByTenPercent(amount));
     }
 
+
+    //TODO -> introduce a mock
+
     @Test
     void shouldReturnAPriceOfAProvidedFinancialProduct(){
         BigDecimal productPrice = new BigDecimal(1200);

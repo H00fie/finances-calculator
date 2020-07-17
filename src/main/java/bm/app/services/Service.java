@@ -23,26 +23,26 @@ public class Service {
     private static final Logger logger = LoggerFactory.getLogger(Service.class);
     private static ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
 
-    private static Connection getConnection(){
+    private static Connection getConnection() {
         Connection connection = Constants.getConnection(
                 DEFAULT_DRIVER,
                 DEFAULT_URL,
                 DEFAULT_USERNAME,
                 DEFAULT_PASSWORD);
-        if (connection == null){
+        if (connection == null) {
             return null;
         }
         return connection;
     }
 
-    public static BigDecimal increaseByTenPercent(BigDecimal amount){
+    public static BigDecimal increaseByTenPercent(BigDecimal amount) {
         BigDecimal divisor = new BigDecimal(10);
         BigDecimal increasedAmount = amount.divide(divisor);
         BigDecimal result = amount.add(increasedAmount);
         return result;
     }
 
-    public static BigDecimal findAProductPriceByGivenName(String name){
+    public static BigDecimal findAProductPriceByGivenName(String name) {
         BigDecimal result = selectAllRecords()
                 .stream()
                 .filter(e -> e.equals(name))
@@ -52,7 +52,23 @@ public class Service {
         return result;
     }
 
-    public static List<FinanceProductModel> selectAllRecords(){
+    public static void insertARecord(FinanceProductModel financeProductModel) {
+        Thread insertingThread = new Thread(() -> {
+        String sql = "insert into finances (name, price, validityperiod) values(?, ?, ?)";
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setString(1, financeProductModel.getName());
+            preparedStatement.setBigDecimal(2, financeProductModel.getPrice());
+            preparedStatement.setInt(3, financeProductModel.getValidityperiod());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            logger.error("Cannot insert a record to the database.");
+            e.printStackTrace();
+        }
+        });
+        insertingThread.start();
+    }
+
+    public static List<FinanceProductModel> selectAllRecords() {
         List<FinanceProductModel> recordsList = new ArrayList<>();
         String sql = "select * from finances";
         PreparedStatement preparedStatement = null;
@@ -60,7 +76,7 @@ public class Service {
         try {
             preparedStatement = getConnection().prepareStatement(sql);
             resultSet = preparedStatement.executeQuery();
-        } catch (SQLException e){
+        } catch (SQLException e) {
             logger.error("Cannot extract records from the database");
             e.printStackTrace();
         }
@@ -75,7 +91,7 @@ public class Service {
                         .validityperiod(resultSet.getInt("validityperiod"))
                         .build());
             }
-        } catch (SQLException e){
+        } catch (SQLException e) {
             logger.error("Cannot create a list of records from the database.");
             e.printStackTrace();
         }

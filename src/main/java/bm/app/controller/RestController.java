@@ -20,6 +20,11 @@ public class RestController {
         return service.selectAllRecords();
     }
 
+    @PostMapping("/product")
+    public void insertARecordIntoADatabase(@RequestBody FinanceProductModel financeProductModel){
+        service.insertARecord(financeProductModel);
+    }
+
 
 
 }
