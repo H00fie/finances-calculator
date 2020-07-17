@@ -46,7 +46,7 @@ public class Service {
         return result;
     }
 
-    public static RiskLevel calculateTheRiskOfTheProductBasedOnValidityPeriod(int months) {
+    public static RiskLevel giveTheRiskNameBasedOnNumberOfMonths(int months) {
         int riskLevel = calculateRiskLevelByNumberOfMonths(months);
             switch (riskLevel){
                 case 1:

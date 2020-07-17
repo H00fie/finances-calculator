@@ -1,3 +1,4 @@
+import bm.app.models.RiskLevel;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -14,7 +15,17 @@ public class Tests {
         assertEquals(expected, increaseByTenPercent(amount));
     }
 
-    void should
+    @Test
+    void shouldReturnACorrectRiskLevelValue(){
+        int months = 18;
+        assertEquals(5, calculateRiskLevelByNumberOfMonths(months));
+    }
+
+    @Test
+    void shouldReturnACorrectEnumValueBasedOnNumberOfMonths(){
+        int months = 26;
+        assertEquals(RiskLevel.HIGH, giveTheRiskNameBasedOnNumberOfMonths(months));
+    }
 
 
     //TODO -> introduce a mock

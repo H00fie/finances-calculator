@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bm/app/services/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bm/app/services/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bm/app/services/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bm/app/services/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +79,37 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="inlay.hints" />
   </component>
-  <component name="RunManager" selected="Spring Boot.Main">
+  <component name="RunManager" selected="JUnit.Tests.shouldReturnACorrectEnumValueBasedOnNumberOfMonths">
+    <configuration name="Tests.shouldReturnACorrectEnumValueBasedOnNumberOfMonths" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="counter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Tests" />
+      <option name="METHOD_NAME" value="shouldReturnACorrectEnumValueBasedOnNumberOfMonths" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tests.shouldReturnACorrectEnumValueBasedOnRiskLevelInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="counter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Tests" />
+      <option name="METHOD_NAME" value="shouldReturnACorrectEnumValueBasedOnRiskLevelInput" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tests.shouldReturnACorrectRiskLevelValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="counter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Tests" />
+      <option name="METHOD_NAME" value="shouldReturnACorrectRiskLevelValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tests.shouldReturnAPriceOfAProvidedFinancialProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="counter" />
       <option name="PACKAGE_NAME" value="" />
@@ -107,6 +139,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Tests.shouldReturnACorrectEnumValueBasedOnNumberOfMonths" />
+        <item itemvalue="JUnit.Tests.shouldReturnACorrectEnumValueBasedOnRiskLevelInput" />
+        <item itemvalue="JUnit.Tests.shouldReturnACorrectRiskLevelValue" />
         <item itemvalue="JUnit.Tests.shouldReturnValueHigherByTenPercent" />
         <item itemvalue="JUnit.Tests.shouldReturnAPriceOfAProvidedFinancialProduct" />
       </list>
@@ -124,7 +159,7 @@
       <updated>1594913664373</updated>
       <workItem from="1594913674464" duration="4407000" />
       <workItem from="1594923116508" duration="9640000" />
-      <workItem from="1594966636266" duration="25010000" />
+      <workItem from="1594966636266" duration="26861000" />
     </task>
     <servers />
   </component>
@@ -140,22 +175,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="173" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1595013675478" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1595013113142">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1595021713597">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595013113142" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1595013113142">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595021713597" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1595021713596">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1595013113142" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1595013113142">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1595021713596" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1595021713596">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1595013113142" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1595013113142">
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1595021713596" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1595021713596">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1595013113142" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1595021713596" />
     <state width="1493" height="213" key="GridCell.Tab.1.bottom" timestamp="1595013113142">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
