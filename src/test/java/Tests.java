@@ -14,6 +14,8 @@ public class Tests {
         assertEquals(expected, increaseByTenPercent(amount));
     }
 
+    void should
+
 
     //TODO -> introduce a mock
 

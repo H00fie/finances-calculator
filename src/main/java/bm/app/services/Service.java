@@ -2,6 +2,7 @@ package bm.app.services;
 
 import bm.app.config.Constants;
 import bm.app.models.FinanceProductModelDTO;
+import bm.app.models.RiskLevel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
@@ -16,8 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static bm.app.config.Constants.*;
+import static bm.app.models.RiskLevel.*;
 
-;
+
 
 @org.springframework.stereotype.Service
 public class Service {
@@ -42,6 +44,47 @@ public class Service {
         BigDecimal increasedAmount = amount.divide(divisor);
         BigDecimal result = amount.add(increasedAmount);
         return result;
+    }
+
+    public static RiskLevel calculateTheRiskOfTheProductBasedOnValidityPeriod(int months) {
+        int riskLevel = calculateRiskLevelByNumberOfMonths(months);
+            switch (riskLevel){
+                case 1:
+                    return NO_RISK;
+                case 2:
+                    return VERY_LOW;
+                case 3:
+                    return LOW;
+                case 4:
+                    return REGULAR;
+                case 5:
+                    return MEDIUM;
+                case 6:
+                    return HIGH;
+                case 7:
+                    return VERY_HIGH;
+        }
+        return UNSPECIFIED;
+    }
+
+    public static int calculateRiskLevelByNumberOfMonths(int months){
+        int riskPointer = 0;
+        if (months == 1) {
+            riskPointer = 1;
+        } else if (months > 1 && months <= 3) {
+            riskPointer = 2;
+        } else if (months > 3 && months <= 6) {
+            riskPointer = 3;
+        } else if (months > 6 && months <= 12) {
+            riskPointer = 4;
+        } else if (months > 12 && months <= 24) {
+            riskPointer = 5;
+        } else if (months > 24 && months <= 48) {
+            riskPointer = 6;
+        } else {
+            riskPointer = 7;
+        }
+        return riskPointer;
     }
 
     public static BigDecimal findAProductPriceByGivenName(String name) {
