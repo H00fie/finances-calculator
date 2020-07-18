@@ -1,9 +1,11 @@
 package bm.app.controller;
 
 import bm.app.models.FinanceProductModelDTO;
+import bm.app.models.RiskLevel;
 import bm.app.services.Service;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @org.springframework.web.bind.annotation.RestController
@@ -28,6 +30,16 @@ public class RestController {
     @PostMapping("/product")
     public void insertARecordIntoTheDatabase(@RequestBody FinanceProductModelDTO financeProductModel){
         service.insertARecord(financeProductModel);
+    }
+
+    @PostMapping("/tenPercentRaise/{number}")
+    public BigDecimal increaseInputByTenPercent(@PathVariable BigDecimal number){
+        return service.increaseByTenPercent(number);
+    }
+
+    @PostMapping("/riskLevel/{months}")
+    public RiskLevel checkTheRiskLevelForGivenTimePeriod(@PathVariable int months){
+        return service.giveTheRiskNameBasedOnNumberOfMonths(months);
     }
 
     @DeleteMapping("/deleteProduct/{id}")
