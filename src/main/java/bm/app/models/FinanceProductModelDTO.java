@@ -17,6 +17,7 @@ public class FinanceProductModelDTO {
     private String name;
     private BigDecimal price;
     private int validityperiod;
+    private RiskLevel riskLevel;
 
 
 }

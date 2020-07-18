@@ -62,8 +62,9 @@ public class Service {
                 return HIGH;
             case 7:
                 return VERY_HIGH;
+            default:
+                return UNSPECIFIED;
         }
-        return UNSPECIFIED;
     }
 
     public static int calculateRiskLevelByNumberOfMonths(int months) {
@@ -98,11 +99,12 @@ public class Service {
 
     public static void insertARecord(FinanceProductModelDTO financeProductModel) {
         Thread insertingThread = new Thread(() -> {
-            String sql = "insert into finances (name, price, validityperiod) values(?, ?, ?)";
+            String sql = "insert into finances (name, price, risklevel, validityperiod) values(?, ?, ?, ?)";
             try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
                 preparedStatement.setString(1, financeProductModel.getName());
                 preparedStatement.setBigDecimal(2, financeProductModel.getPrice());
-                preparedStatement.setInt(3, financeProductModel.getValidityperiod());
+                preparedStatement.setString(3, financeProductModel.getRiskLevel().toString());
+                preparedStatement.setInt(4, financeProductModel.getValidityperiod());
                 preparedStatement.executeUpdate();
             } catch (SQLException e) {
                 logger.error("Cannot insert a record to the database.");
@@ -129,7 +131,7 @@ public class Service {
     public static FinanceProductModelDTO getARecordById(int id) {
 
         FinanceProductModelDTO model = new FinanceProductModelDTO();
-        String sql = "select name, price, validityperiod from finances where id = ?";
+        String sql = "select name, price, risklevel, validityperiod from finances where id = ?";
         PreparedStatement preparedStatement;
         ResultSet resultSet;
 
@@ -142,6 +144,7 @@ public class Service {
             model.setId(id);
             model.setName(resultSet.getString("name"));
             model.setPrice(resultSet.getBigDecimal("price"));
+            model.setRiskLevel(RiskLevel.valueOf(resultSet.getString("risklevel")));
             model.setValidityperiod(resultSet.getInt("validityperiod"));
 
         } catch (SQLException e) {
@@ -171,6 +174,7 @@ public class Service {
                                 .builder()
                                 .id(resultSet.getInt("id"))
                                 .name(resultSet.getString("name"))
+                                .riskLevel(RiskLevel.valueOf(resultSet.getString("risklevel")))
                                 .price(resultSet.getBigDecimal("price"))
                                 .validityperiod(resultSet.getInt("validityperiod"))
                                 .build());
