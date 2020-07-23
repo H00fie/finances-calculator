@@ -27,19 +27,24 @@ public class RestController {
         return service.getARecordById(id);
     }
 
-    @PostMapping("/product")
-    public void insertARecordIntoTheDatabase(@RequestBody FinanceProductModelDTO financeProductModel){
-        service.insertARecord(financeProductModel);
-    }
-
-    @PostMapping("/tenPercentRaise/{number}")
+    @GetMapping("/tenPercentRaise/{number}")
     public BigDecimal increaseInputByTenPercent(@PathVariable BigDecimal number){
         return service.increaseByTenPercent(number);
     }
 
-    @PostMapping("/riskLevel/{months}")
+    @GetMapping("/priceByName/{name}")
+    public BigDecimal checkThePriceByName(@PathVariable String name){
+        return service.findAProductPriceByGivenName(name);
+    }
+
+    @GetMapping("/riskLevel/{months}")
     public RiskLevel checkTheRiskLevelForGivenTimePeriod(@PathVariable int months){
         return service.giveTheRiskNameBasedOnNumberOfMonths(months);
+    }
+
+    @PostMapping("/product")
+    public void insertARecordIntoTheDatabase(@RequestBody FinanceProductModelDTO financeProductModel){
+        service.insertARecord(financeProductModel);
     }
 
     @DeleteMapping("/deleteProduct/{id}")

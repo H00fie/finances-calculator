@@ -1,4 +1,5 @@
 import bm.app.models.RiskLevel;
+import ch.qos.logback.classic.BasicConfigurator;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -26,7 +27,6 @@ public class Tests {
         int months = 26;
         assertEquals(RiskLevel.HIGH, giveTheRiskNameBasedOnNumberOfMonths(months));
     }
-
 
     //TODO -> introduce a mock
 
