@@ -1,3 +1,5 @@
+package bm.app.services;
+
 import bm.app.models.RiskLevel;
 import ch.qos.logback.classic.BasicConfigurator;
 import org.junit.jupiter.api.Test;

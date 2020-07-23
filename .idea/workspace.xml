@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="23c6bf47-6e00-4f74-b268-14bd3c87385c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bm/app/controller/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bm/app/controller/RestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bm/app/controller/RestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bm/app/controller/RestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bm/app/services/VatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bm/app/services/VatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bm/app/services/Tests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +40,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -72,17 +72,30 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../devskiller" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="inlay.hints" />
   </component>
-  <component name="RunManager" selected="Spring Boot.Main">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="bm.app.services" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="bm.app.services" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.VatServiceTest.shouldCalculateGrossPriceForDefaultVat">
     <configuration name="Tests.shouldReturnACorrectEnumValueBasedOnNumberOfMonths" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="counter" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Tests" />
+      <option name="PACKAGE_NAME" value="bm.app.services" />
+      <option name="MAIN_CLASS_NAME" value="bm.app.services.Tests" />
       <option name="METHOD_NAME" value="shouldReturnACorrectEnumValueBasedOnNumberOfMonths" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -91,8 +104,8 @@
     </configuration>
     <configuration name="Tests.shouldReturnACorrectEnumValueBasedOnRiskLevelInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="counter" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Tests" />
+      <option name="PACKAGE_NAME" value="bm.app.services" />
+      <option name="MAIN_CLASS_NAME" value="bm.app.services.Tests" />
       <option name="METHOD_NAME" value="shouldReturnACorrectEnumValueBasedOnRiskLevelInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -101,29 +114,41 @@
     </configuration>
     <configuration name="Tests.shouldReturnACorrectRiskLevelValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="counter" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Tests" />
+      <option name="PACKAGE_NAME" value="bm.app.services" />
+      <option name="MAIN_CLASS_NAME" value="bm.app.services.Tests" />
       <option name="METHOD_NAME" value="shouldReturnACorrectRiskLevelValue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tests.shouldReturnAPriceOfAProvidedFinancialProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VatServiceTest.shouldCalculateGrossPriceForDefaultVat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="counter" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Tests" />
-      <option name="METHOD_NAME" value="shouldReturnAPriceOfAProvidedFinancialProduct" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bm.app.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bm.app.services" />
+      <option name="MAIN_CLASS_NAME" value="bm.app.services.VatServiceTest" />
+      <option name="METHOD_NAME" value="shouldCalculateGrossPriceForDefaultVat" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tests.shouldReturnValueHigherByTenPercent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VatServiceTest.shouldCalculateGrossPriceForDifferentVat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="counter" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Tests" />
-      <option name="METHOD_NAME" value="shouldReturnValueHigherByTenPercent" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bm.app.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bm.app.services" />
+      <option name="MAIN_CLASS_NAME" value="bm.app.services.VatServiceTest" />
+      <option name="METHOD_NAME" value="shouldCalculateGrossPriceForDifferentVat" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VatServiceTest.shouldCalculateGrossPriceForDefaultVat" />
+        <item itemvalue="JUnit.VatServiceTest.shouldCalculateGrossPriceForDifferentVat" />
         <item itemvalue="JUnit.Tests.shouldReturnACorrectEnumValueBasedOnNumberOfMonths" />
         <item itemvalue="JUnit.Tests.shouldReturnACorrectEnumValueBasedOnRiskLevelInput" />
         <item itemvalue="JUnit.Tests.shouldReturnACorrectRiskLevelValue" />
-        <item itemvalue="JUnit.Tests.shouldReturnValueHigherByTenPercent" />
-        <item itemvalue="JUnit.Tests.shouldReturnAPriceOfAProvidedFinancialProduct" />
       </list>
     </recent_temporary>
   </component>
@@ -162,7 +187,7 @@
       <workItem from="1595080554331" duration="12338000" />
       <workItem from="1595261875879" duration="3284000" />
       <workItem from="1595347100253" duration="3826000" />
-      <workItem from="1595455733549" duration="3366000" />
+      <workItem from="1595455733549" duration="8219000" />
     </task>
     <servers />
   </component>
@@ -178,26 +203,30 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="574" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1595512691890" />
+    <state x="566" y="278" width="403" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1595513812635">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="566" y="278" width="403" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.834@0.0.1536.834" timestamp="1595513812635" />
     <state x="549" y="173" key="FileChooserDialogImpl" timestamp="1595505772330">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="173" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1595505772330" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1595149018757">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1595530076643">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595149018757" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1595149018757">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595530076643" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1595530076643">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1595149018757" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1595149018757">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1595530076643" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1595530076643">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1595149018757" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1595149018757">
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1595530076643" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1595530076643">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1595149018757" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1595530076643" />
     <state width="1493" height="213" key="GridCell.Tab.1.bottom" timestamp="1595149018758">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -234,6 +263,14 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="465" y="243" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1594926976659" />
+    <state x="512" y="108" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595514039704">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="512" y="108" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.834@0.0.1536.834" timestamp="1595514039704" />
+    <state x="540" y="137" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1595513796685">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="540" y="137" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.834@0.0.1536.834" timestamp="1595513796685" />
     <state x="420" y="101" key="spring file set editor" timestamp="1595027021263">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

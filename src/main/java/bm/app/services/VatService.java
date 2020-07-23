@@ -18,7 +18,7 @@ public class VatService {
     }
 
     public BigDecimal getGrossPrice(BigDecimal netPrice, BigDecimal vatValue){
-        MathContext mathContext = new MathContext(4);
+        MathContext mathContext = new MathContext(5);
         return netPrice.multiply(vatValue.add(BigDecimal.ONE)).round(mathContext);
     }
 }
