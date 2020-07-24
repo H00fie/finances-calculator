@@ -8,7 +8,9 @@ import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 import java.util.UUID;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class VatServiceTest {
     VatService vatService;
@@ -21,8 +23,7 @@ class VatServiceTest {
         //when
         BigDecimal result = vatService.getGrossPriceForDefaultVat(product);
         //then
-        assertEquals(new BigDecimal("492.00"), result);
-
+        assertThat(result).isEqualTo(new BigDecimal("492.00"));
     }
 
     @Test
@@ -33,7 +34,7 @@ class VatServiceTest {
         //when
         BigDecimal result = vatService.getGrossPrice(product.getNetPrice(), new BigDecimal("0.08"));
         //then
-        assertEquals(new BigDecimal("108.00"), result);
+        assertThat(result).isEqualTo(new BigDecimal("108.00"));
     }
 
     @Test
