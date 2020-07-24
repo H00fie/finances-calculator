@@ -1,5 +1,6 @@
 package bm.app.services;
 
+import bm.app.exceptions.IncorrectVatException;
 import bm.app.models.AdditionalMiniProduct;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -18,7 +19,7 @@ class VatServiceTest {
 
     @Test
     @DisplayName("Should calculate the gross price for the default VAT value.")
-    void shouldCalculateGrossPriceForDefaultVat() throws Exception {
+    void shouldCalculateGrossPriceForDefaultVat() throws IncorrectVatException {
         //given
         Mockito.when(vatProvider.getDefaultVat()).thenReturn(new BigDecimal("0.23"));
         AdditionalMiniProduct product = generateProduct("400.00", "Small insurance");
@@ -30,7 +31,7 @@ class VatServiceTest {
 
     @Test
     @DisplayName("Should calculate the gross price for a different VAT value.")
-    void shouldCalculateGrossPriceForDifferentVat() throws Exception {
+    void shouldCalculateGrossPriceForDifferentVat() throws IncorrectVatException {
         //given
         String type = "SMS reminder service";
         AdditionalMiniProduct product = generateProduct("100", type);
