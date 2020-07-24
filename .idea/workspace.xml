@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="23c6bf47-6e00-4f74-b268-14bd3c87385c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bm/app/models/AdditionalMiniProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bm/app/models/AdditionalMiniProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bm/app/services/VatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bm/app/services/VatService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/bm/app/services/VatServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bm/app/services/VatServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +42,7 @@
         <option value="Enum" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -90,7 +93,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.VatServiceTest.shouldCalculateGrossPriceForDefaultVat">
+  <component name="RunManager" selected="JUnit.VatServiceTest.shouldThrowExceptionWhenVatIsTooHigh">
     <configuration name="Tests.shouldReturnACorrectEnumValueBasedOnNumberOfMonths" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="counter" />
       <option name="PACKAGE_NAME" value="bm.app.services" />
@@ -168,8 +171,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VatServiceTest.shouldCalculateGrossPriceForDefaultVat" />
         <item itemvalue="JUnit.VatServiceTest.shouldThrowExceptionWhenVatIsTooHigh" />
+        <item itemvalue="JUnit.VatServiceTest.shouldCalculateGrossPriceForDefaultVat" />
         <item itemvalue="JUnit.VatServiceTest.shouldCalculateGrossPriceForDifferentVat" />
         <item itemvalue="JUnit.Tests.shouldReturnACorrectEnumValueBasedOnNumberOfMonths" />
         <item itemvalue="JUnit.Tests.shouldReturnACorrectEnumValueBasedOnRiskLevelInput" />
@@ -194,7 +197,7 @@
       <workItem from="1595347100253" duration="3826000" />
       <workItem from="1595455733549" duration="8623000" />
       <workItem from="1595532509558" duration="3365000" />
-      <workItem from="1595585502465" duration="685000" />
+      <workItem from="1595585502465" duration="8564000" />
     </task>
     <servers />
   </component>
@@ -218,22 +221,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="173" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1595505772330" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1595589073349">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1595598954668">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595589073349" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1595589073349">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595598954668" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1595598954668">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1595589073349" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1595589073347">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1595598954668" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1595598954668">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1595589073347" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1595589073349">
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1595598954668" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1595598954668">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1595589073349" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1595598954668" />
     <state width="1493" height="213" key="GridCell.Tab.1.bottom" timestamp="1595149018758">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -258,10 +261,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1595014446136" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1595512734267">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1595605862422">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1595512734267" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1595605862422" />
     <state x="485" y="60" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1594969251080">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -278,6 +281,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="540" y="137" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.834@0.0.1536.834" timestamp="1595513796685" />
+    <state x="431" y="155" key="search.everywhere.popup" timestamp="1595591089935">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1595591089935" />
     <state x="420" y="101" key="spring file set editor" timestamp="1595027021263">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

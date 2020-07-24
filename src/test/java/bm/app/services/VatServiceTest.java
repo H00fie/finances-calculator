@@ -9,8 +9,7 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 class VatServiceTest {
     VatService vatService;
@@ -39,21 +38,22 @@ class VatServiceTest {
 
     @Test
     @DisplayName("Should throw Exception when VAT value is too high.")
-    void shouldThrowExceptionWhenVatIsTooHigh(){
+    void shouldThrowExceptionWhenVatIsTooHigh() {
         //given
         AdditionalMiniProduct additionalMiniProduct = generateProductWithPrice("1000.00");
         //then
-        assertThrows(Exception.class, () -> {
+        assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
             vatService.getGrossPrice(additionalMiniProduct.getNetPrice(), BigDecimal.TEN);
         });
+
     }
 
-    private AdditionalMiniProduct generateProductWithPrice(String price){
+    private AdditionalMiniProduct generateProductWithPrice(String price) {
         return new AdditionalMiniProduct(UUID.randomUUID(), new BigDecimal(price));
     }
 
     @BeforeEach
-    void setUp(){
+    void setUp() {
         vatService = new VatService();
     }
 }
