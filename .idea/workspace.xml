@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="23c6bf47-6e00-4f74-b268-14bd3c87385c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bm/app/models/AdditionalMiniProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bm/app/models/AdditionalMiniProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bm/app/services/VatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bm/app/services/VatService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/bm/app/services/VatServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bm/app/services/VatServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +195,7 @@
       <workItem from="1595347100253" duration="3826000" />
       <workItem from="1595455733549" duration="8623000" />
       <workItem from="1595532509558" duration="3365000" />
-      <workItem from="1595585502465" duration="8564000" />
+      <workItem from="1595585502465" duration="13880000" />
     </task>
     <servers />
   </component>
@@ -221,22 +219,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="173" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1595505772330" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1595598954668">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1595614495836">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595598954668" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1595598954668">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595614495836" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1595614495836">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1595598954668" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1595598954668">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1595614495836" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1595614495836">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1595598954668" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1595598954668">
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1595614495836" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1595614495836">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1595598954668" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1595614495836" />
     <state width="1493" height="213" key="GridCell.Tab.1.bottom" timestamp="1595149018758">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -289,5 +287,19 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="420" y="101" key="spring file set editor/0.0.1536.834@0.0.1536.834" timestamp="1595027021263" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/bm/app/services/VatServiceTest.java</url>
+          <line>45</line>
+          <properties class="bm.app.services.VatServiceTest" method="shouldThrowExceptionWhenVatIsTooHigh">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
