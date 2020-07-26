@@ -2,10 +2,12 @@ package bm.app.services;
 
 import bm.app.exceptions.IncorrectVatException;
 import bm.app.models.AdditionalMiniProduct;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
 
+@Service
 public class VatService {
 
     VatProvider vatProvider;

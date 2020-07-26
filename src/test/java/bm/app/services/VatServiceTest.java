@@ -50,7 +50,7 @@ class VatServiceTest {
         AdditionalMiniProduct additionalMiniProduct = generateProduct("1000.00", type);
         Mockito.when(vatProvider.getVatForType(type)).thenReturn(BigDecimal.TEN);
         //then
-        assertThatExceptionOfType(Exception.class).isThrownBy(() -> {
+        assertThatExceptionOfType(IncorrectVatException.class).isThrownBy(() -> {
             vatService.getGrossPrice(additionalMiniProduct.getNetPrice(), type);
         });
 
@@ -65,4 +65,7 @@ class VatServiceTest {
         vatProvider = Mockito.mock(VatProvider.class);
         vatService = new VatService(vatProvider);
     }
+
+
+
 }

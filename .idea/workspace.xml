@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23c6bf47-6e00-4f74-b268-14bd3c87385c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/bm/app/services/ServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bm/app/controller/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bm/app/controller/RestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bm/app/services/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bm/app/services/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bm/app/services/VatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bm/app/services/VatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bm/app/services/Tests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/bm/app/services/VatServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bm/app/services/VatServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bm/app/controller/RestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bm/app/controller/RestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bm/app/services/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bm/app/services/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bm/app/services/VatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bm/app/services/VatService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/bm/app/services/Tests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/bm/app/services/VatServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/bm/app/services/VatServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +49,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -74,11 +84,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../devskiller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../unit-tests-with-mock" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="inlay.hints" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -91,28 +101,55 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.VatServiceTest.shouldThrowExceptionWhenVatIsTooHigh">
-    <configuration name="Tests.shouldReturnACorrectEnumValueBasedOnNumberOfMonths" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.Main">
+    <configuration name="ServiceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="counter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bm.app.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="PACKAGE_NAME" value="bm.app.services" />
-      <option name="MAIN_CLASS_NAME" value="bm.app.services.Tests" />
+      <option name="MAIN_CLASS_NAME" value="bm.app.services.ServiceTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceTests.shouldReturnACorrectEnumValueBasedOnNumberOfMonths" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="counter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bm.app.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bm.app.services" />
+      <option name="MAIN_CLASS_NAME" value="bm.app.services.ServiceTests" />
       <option name="METHOD_NAME" value="shouldReturnACorrectEnumValueBasedOnNumberOfMonths" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tests.shouldReturnACorrectEnumValueBasedOnRiskLevelInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServiceTests.shouldReturnValueHigherByTenPercent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="counter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bm.app.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="PACKAGE_NAME" value="bm.app.services" />
-      <option name="MAIN_CLASS_NAME" value="bm.app.services.Tests" />
-      <option name="METHOD_NAME" value="shouldReturnACorrectEnumValueBasedOnRiskLevelInput" />
+      <option name="MAIN_CLASS_NAME" value="bm.app.services.ServiceTests" />
+      <option name="METHOD_NAME" value="shouldReturnValueHigherByTenPercent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VatServiceTest.shouldCalculateGrossPriceForDefaultVat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VatServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="counter" />
       <extension name="coverage">
         <pattern>
@@ -122,8 +159,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="bm.app.services" />
       <option name="MAIN_CLASS_NAME" value="bm.app.services.VatServiceTest" />
-      <option name="METHOD_NAME" value="shouldCalculateGrossPriceForDefaultVat" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,22 +180,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VatServiceTest.shouldThrowExceptionWhenVatIsTooHigh" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="counter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bm.app.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="bm.app.services" />
-      <option name="MAIN_CLASS_NAME" value="bm.app.services.VatServiceTest" />
-      <option name="METHOD_NAME" value="shouldThrowExceptionWhenVatIsTooHigh" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="counter" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="bm.app.Main" />
@@ -169,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VatServiceTest.shouldThrowExceptionWhenVatIsTooHigh" />
-        <item itemvalue="JUnit.VatServiceTest.shouldCalculateGrossPriceForDefaultVat" />
+        <item itemvalue="JUnit.ServiceTests.shouldReturnACorrectEnumValueBasedOnNumberOfMonths" />
+        <item itemvalue="JUnit.ServiceTests" />
+        <item itemvalue="JUnit.ServiceTests.shouldReturnValueHigherByTenPercent" />
+        <item itemvalue="JUnit.VatServiceTest" />
         <item itemvalue="JUnit.VatServiceTest.shouldCalculateGrossPriceForDifferentVat" />
-        <item itemvalue="JUnit.Tests.shouldReturnACorrectEnumValueBasedOnNumberOfMonths" />
-        <item itemvalue="JUnit.Tests.shouldReturnACorrectEnumValueBasedOnRiskLevelInput" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +215,12 @@
       <workItem from="1595347100253" duration="3826000" />
       <workItem from="1595455733549" duration="8623000" />
       <workItem from="1595532509558" duration="3365000" />
-      <workItem from="1595585502465" duration="14604000" />
+      <workItem from="1595585502465" duration="15238000" />
+      <workItem from="1595619571769" duration="4274000" />
+      <workItem from="1595675514526" duration="1895000" />
+      <workItem from="1595682021626" duration="388000" />
+      <workItem from="1595682457411" duration="14255000" />
+      <workItem from="1595747223723" duration="2678000" />
     </task>
     <servers />
   </component>
@@ -203,6 +228,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="77" key="#File_and_Code_Templates" timestamp="1595622945708">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="77" key="#File_and_Code_Templates/0.0.1536.834@0.0.1536.834" timestamp="1595622945708" />
     <state x="352" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595348569049">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -215,50 +244,54 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="566" y="278" width="403" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.834@0.0.1536.834" timestamp="1595513812635" />
-    <state x="549" y="173" key="FileChooserDialogImpl" timestamp="1595505772330">
+    <state x="339" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595714889378">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="173" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1595505772330" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1595614495836">
+    <state x="339" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1595714889378" />
+    <state x="549" y="173" key="FileChooserDialogImpl" timestamp="1595700795669">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595614495836" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1595614495836">
+    <state x="549" y="173" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1595700795669" />
+    <state width="1492" height="227" key="GridCell.Tab.0.bottom" timestamp="1595756697046">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1595614495836" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1595614495836">
+    <state width="1492" height="227" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595756697046" />
+    <state width="1492" height="227" key="GridCell.Tab.0.center" timestamp="1595756697046">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1595614495836" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1595614495836">
+    <state width="1492" height="227" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1595756697046" />
+    <state width="1492" height="227" key="GridCell.Tab.0.left" timestamp="1595756697046">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1595614495836" />
-    <state width="1493" height="213" key="GridCell.Tab.1.bottom" timestamp="1595149018758">
+    <state width="1492" height="227" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1595756697046" />
+    <state width="1492" height="227" key="GridCell.Tab.0.right" timestamp="1595756697046">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595149018758" />
-    <state width="1493" height="213" key="GridCell.Tab.1.center" timestamp="1595149018757">
+    <state width="1492" height="227" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1595756697046" />
+    <state width="1492" height="227" key="GridCell.Tab.1.bottom" timestamp="1595756697047">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1595149018757" />
-    <state width="1493" height="213" key="GridCell.Tab.1.left" timestamp="1595149018757">
+    <state width="1492" height="227" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595756697047" />
+    <state width="1492" height="227" key="GridCell.Tab.1.center" timestamp="1595756697047">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1595149018757" />
-    <state width="1493" height="213" key="GridCell.Tab.1.right" timestamp="1595149018757">
+    <state width="1492" height="227" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1595756697047" />
+    <state width="1492" height="227" key="GridCell.Tab.1.left" timestamp="1595756697046">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1595149018757" />
+    <state width="1492" height="227" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1595756697046" />
+    <state width="1492" height="227" key="GridCell.Tab.1.right" timestamp="1595756697047">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1492" height="227" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1595756697047" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1594969272575">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.834@0.0.1536.834" timestamp="1594969272575" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1595014446136">
+    <state x="277" y="0" key="SettingsEditor" timestamp="1595619465904">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1595014446136" />
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1595619465904" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1595605862422">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -267,10 +300,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="485" y="60" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1594969251080" />
-    <state x="465" y="243" key="com.intellij.ide.util.TipDialog" timestamp="1595585466481">
+    <state x="465" y="243" key="com.intellij.ide.util.TipDialog" timestamp="1595682456860">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="465" y="243" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1595585466481" />
+    <state x="465" y="243" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1595682456860" />
     <state x="512" y="108" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595514039704">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

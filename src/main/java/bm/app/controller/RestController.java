@@ -27,9 +27,10 @@ public class RestController {
         return service.getARecordById(id);
     }
 
-    @GetMapping("/tenPercentRaise/{number}")
-    public BigDecimal increaseInputByTenPercent(@PathVariable BigDecimal number){
-        return service.increaseByTenPercent(number);
+    @GetMapping("/tenPercentRaise/{number}/{divisor}")
+    public BigDecimal increaseInputByTenPercent(@PathVariable BigDecimal number,
+                                                @PathVariable BigDecimal divisor){
+        return service.increaseByGivenAmount(number,divisor);
     }
 
     @GetMapping("/priceByName/{name}")

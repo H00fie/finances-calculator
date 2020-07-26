@@ -23,8 +23,16 @@ import static bm.app.models.RiskLevel.*;
 @org.springframework.stereotype.Service
 public class Service {
 
+    DiscountProvider discountProvider;
+
+    public Service(DiscountProvider discountProvider) {
+        this.discountProvider = discountProvider;
+    }
+
     private static final Logger logger = LoggerFactory.getLogger(Service.class);
     private static ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
+
+
 
     private static Connection getConnection() {
         Connection connection = Constants.getConnection(
@@ -38,8 +46,7 @@ public class Service {
         return connection;
     }
 
-    public static BigDecimal increaseByTenPercent(BigDecimal amount) {
-        BigDecimal divisor = new BigDecimal(10);
+    public static BigDecimal increaseByGivenAmount(BigDecimal amount, BigDecimal divisor) {
         BigDecimal increasedAmount = amount.divide(divisor);
         BigDecimal result = amount.add(increasedAmount);
         return result;
