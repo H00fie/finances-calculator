@@ -6,15 +6,17 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
+import java.util.Optional;
 import java.util.UUID;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static bm.app.services.Service.*;
-
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Component
 public class ServiceTests {
 
     Service service;
@@ -46,15 +48,15 @@ public class ServiceTests {
 
     @Test
     void shouldReturnAPriceOfAProvidedFinancialProduct() {
-        BigDecimal productPrice = new BigDecimal(1200);
+        BigDecimal productPrice = new BigDecimal(10000);
         String productName = "SilverLoan";
-        assertEquals(productPrice, findAProductPriceByGivenName(productName));
+        assertEquals(productPrice,findAProductPriceByGivenName(productName));
     }
 
     @BeforeEach
     void setUp() {
-        service = new Service(discountProvider);
         discountProvider = Mockito.mock(DiscountProvider.class);
+        service = new Service(Optional.of(discountProvider));
     }
 
 

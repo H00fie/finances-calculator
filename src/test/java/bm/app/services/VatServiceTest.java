@@ -6,13 +6,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
+import java.util.Optional;
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
+@Component
 class VatServiceTest {
     VatService vatService;
     VatProvider vatProvider;
@@ -63,7 +66,7 @@ class VatServiceTest {
     @BeforeEach
     void setUp() {
         vatProvider = Mockito.mock(VatProvider.class);
-        vatService = new VatService(vatProvider);
+        vatService = new VatService(Optional.of(vatProvider));
     }
 
 

@@ -15,6 +15,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static bm.app.config.Constants.*;
 import static bm.app.models.RiskLevel.*;
@@ -25,12 +26,12 @@ public class Service {
 
     DiscountProvider discountProvider;
 
-    public Service(DiscountProvider discountProvider) {
-        this.discountProvider = discountProvider;
+    public Service(Optional<DiscountProvider> discountProvider) {
+        discountProvider.ifPresent(discountProvider1 -> {this.discountProvider = discountProvider1;});
     }
 
     private static final Logger logger = LoggerFactory.getLogger(Service.class);
-    private static ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
+//    private static ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
 
 
 
@@ -97,7 +98,7 @@ public class Service {
     public static BigDecimal findAProductPriceByGivenName(String name) {
         BigDecimal result = selectAllRecords()
                 .stream()
-                .filter(e -> e.equals(name))
+                .filter(e -> e.getName().equals(name))
                 .findFirst()
                 .get()
                 .getPrice();

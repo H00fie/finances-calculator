@@ -35,7 +35,7 @@ public class RestController {
 
     @GetMapping("/priceByName/{name}")
     public BigDecimal checkThePriceByName(@PathVariable String name){
-        return service.findAProductPriceByGivenName(name);
+        return Service.findAProductPriceByGivenName(name);
     }
 
     @GetMapping("/riskLevel/{months}")

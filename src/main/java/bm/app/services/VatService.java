@@ -6,14 +6,15 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
+import java.util.Optional;
 
-@Service
+
 public class VatService {
 
     VatProvider vatProvider;
 
-    public VatService(VatProvider vatProvider){
-        this.vatProvider = vatProvider;
+    public VatService(Optional<VatProvider> vatProvider){
+        vatProvider.ifPresent(vatProvider1 -> {this.vatProvider = vatProvider1;});
     }
 
     public BigDecimal getGrossPriceForDefaultVat(AdditionalMiniProduct additionalMiniProduct) throws IncorrectVatException {

@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23c6bf47-6e00-4f74-b268-14bd3c87385c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/bm/app/services/ServiceTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bm/app/controller/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bm/app/controller/RestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bm/app/services/DiscountProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bm/app/services/DiscountProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bm/app/services/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bm/app/services/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bm/app/services/VatProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bm/app/services/VatProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bm/app/services/VatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bm/app/services/VatService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/bm/app/services/Tests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bm/app/services/ServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bm/app/services/ServiceTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/bm/app/services/VatServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bm/app/services/VatServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bm/app/controller/RestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bm/app/controller/RestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bm/app/services/DiscountProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bm/app/services/DiscountProvider.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bm/app/services/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bm/app/services/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bm/app/services/VatProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bm/app/services/VatProvider.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bm/app/services/VatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bm/app/services/VatService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/bm/app/services/Tests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/bm/app/services/ServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/bm/app/services/ServiceTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/bm/app/services/VatServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/bm/app/services/VatServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +43,19 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="financialproducts@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="financialproducts@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="financialproducts: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="financialproducts@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="financialproducts: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="finances: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -84,7 +100,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../unit-tests-with-mock" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../party-guests-manager" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -133,7 +149,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceTests.shouldReturnValueHigherByTenPercent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServiceTests.shouldReturnACorrectRiskLevelValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="counter" />
       <extension name="coverage">
         <pattern>
@@ -143,7 +159,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="bm.app.services" />
       <option name="MAIN_CLASS_NAME" value="bm.app.services.ServiceTests" />
-      <option name="METHOD_NAME" value="shouldReturnValueHigherByTenPercent" />
+      <option name="METHOD_NAME" value="shouldReturnACorrectRiskLevelValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceTests.shouldReturnAPriceOfAProvidedFinancialProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="counter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bm.app.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bm.app.services" />
+      <option name="MAIN_CLASS_NAME" value="bm.app.services.ServiceTests" />
+      <option name="METHOD_NAME" value="shouldReturnAPriceOfAProvidedFinancialProduct" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,22 +196,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VatServiceTest.shouldCalculateGrossPriceForDifferentVat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="counter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bm.app.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="bm.app.services" />
-      <option name="MAIN_CLASS_NAME" value="bm.app.services.VatServiceTest" />
-      <option name="METHOD_NAME" value="shouldCalculateGrossPriceForDifferentVat" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="counter" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="bm.app.Main" />
@@ -189,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ServiceTests.shouldReturnACorrectEnumValueBasedOnNumberOfMonths" />
         <item itemvalue="JUnit.ServiceTests" />
-        <item itemvalue="JUnit.ServiceTests.shouldReturnValueHigherByTenPercent" />
+        <item itemvalue="JUnit.ServiceTests.shouldReturnAPriceOfAProvidedFinancialProduct" />
+        <item itemvalue="JUnit.ServiceTests.shouldReturnACorrectEnumValueBasedOnNumberOfMonths" />
         <item itemvalue="JUnit.VatServiceTest" />
-        <item itemvalue="JUnit.VatServiceTest.shouldCalculateGrossPriceForDifferentVat" />
+        <item itemvalue="JUnit.ServiceTests.shouldReturnACorrectRiskLevelValue" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +236,8 @@
       <workItem from="1595675514526" duration="1895000" />
       <workItem from="1595682021626" duration="388000" />
       <workItem from="1595682457411" duration="14255000" />
-      <workItem from="1595747223723" duration="2678000" />
+      <workItem from="1595747223723" duration="5625000" />
+      <workItem from="1595777504490" duration="8184000" />
     </task>
     <servers />
   </component>
@@ -248,42 +265,42 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="339" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1595714889378" />
-    <state x="549" y="173" key="FileChooserDialogImpl" timestamp="1595700795669">
+    <state x="549" y="173" key="FileChooserDialogImpl" timestamp="1595759161643">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="173" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1595700795669" />
-    <state width="1492" height="227" key="GridCell.Tab.0.bottom" timestamp="1595756697046">
+    <state x="549" y="173" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1595759161643" />
+    <state width="1492" height="267" key="GridCell.Tab.0.bottom" timestamp="1595788455571">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1492" height="227" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595756697046" />
-    <state width="1492" height="227" key="GridCell.Tab.0.center" timestamp="1595756697046">
+    <state width="1492" height="267" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595788455571" />
+    <state width="1492" height="267" key="GridCell.Tab.0.center" timestamp="1595788455571">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1492" height="227" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1595756697046" />
-    <state width="1492" height="227" key="GridCell.Tab.0.left" timestamp="1595756697046">
+    <state width="1492" height="267" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1595788455571" />
+    <state width="1492" height="267" key="GridCell.Tab.0.left" timestamp="1595788455571">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1492" height="227" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1595756697046" />
-    <state width="1492" height="227" key="GridCell.Tab.0.right" timestamp="1595756697046">
+    <state width="1492" height="267" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1595788455571" />
+    <state width="1492" height="267" key="GridCell.Tab.0.right" timestamp="1595788455571">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1492" height="227" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1595756697046" />
-    <state width="1492" height="227" key="GridCell.Tab.1.bottom" timestamp="1595756697047">
+    <state width="1492" height="267" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1595788455571" />
+    <state width="1492" height="267" key="GridCell.Tab.1.bottom" timestamp="1595788455568">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1492" height="227" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595756697047" />
-    <state width="1492" height="227" key="GridCell.Tab.1.center" timestamp="1595756697047">
+    <state width="1492" height="267" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595788455568" />
+    <state width="1492" height="267" key="GridCell.Tab.1.center" timestamp="1595788455568">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1492" height="227" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1595756697047" />
-    <state width="1492" height="227" key="GridCell.Tab.1.left" timestamp="1595756697046">
+    <state width="1492" height="267" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1595788455568" />
+    <state width="1492" height="267" key="GridCell.Tab.1.left" timestamp="1595788455568">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1492" height="227" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1595756697046" />
-    <state width="1492" height="227" key="GridCell.Tab.1.right" timestamp="1595756697047">
+    <state width="1492" height="267" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1595788455568" />
+    <state width="1492" height="267" key="GridCell.Tab.1.right" timestamp="1595788455568">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1492" height="227" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1595756697047" />
+    <state width="1492" height="267" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1595788455568" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1594969272575">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -326,7 +343,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/bm/app/services/VatServiceTest.java</url>
-          <line>46</line>
+          <line>49</line>
           <properties class="bm.app.services.VatServiceTest" method="shouldThrowExceptionWhenVatIsTooHigh">
             <option name="EMULATED" value="true" />
           </properties>
