@@ -28,7 +28,7 @@ public class RestController {
     }
 
     @GetMapping("/tenPercentRaise/{number}/{divisor}")
-    public BigDecimal increaseInputByTenPercent(@PathVariable BigDecimal number,
+    public BigDecimal increaseInputByGivenPercent(@PathVariable BigDecimal number,
                                                 @PathVariable BigDecimal divisor){
         return service.increaseByGivenAmount(number,divisor);
     }
